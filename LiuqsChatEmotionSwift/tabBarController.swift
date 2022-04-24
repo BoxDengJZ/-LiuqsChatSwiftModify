@@ -42,7 +42,6 @@ class tabBarController: UITabBarController,UITabBarControllerDelegate, UIViewCon
     
         self.navigationItem.title = "聊天"
     
-        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     /// 中间按钮的点击事件
@@ -73,13 +72,6 @@ class tabBarController: UITabBarController,UITabBarControllerDelegate, UIViewCon
 
         addChildViewController(ChatViewController(), title: "聊天", itemIcon: "tabbar_message_center")
         
-        addChildViewController(HomeTableViewController(), title: "首页", itemIcon: "tabbar_home")
-        
-        addChildViewController(UIViewController(), title: "compose", itemIcon: "4")
-        
-        addChildViewController(DiscoverTableViewController(), title: "发现", itemIcon: "tabbar_discover")
-        
-        addChildViewController(PersonalViewController(), title: "我", itemIcon: "tabbar_profile")
     }
     
     
