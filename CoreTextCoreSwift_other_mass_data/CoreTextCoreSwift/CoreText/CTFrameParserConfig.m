@@ -14,7 +14,7 @@
         _width = 200.f;
         _fontSize = 16.f;
         _lineSpace = 8.0f;
-        _textColor = UIColor.grayColor;
+        _textColorX = UIColor.grayColor;
     }
     return  self;
 }

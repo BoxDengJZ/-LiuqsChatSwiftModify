@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat fontSize;
 @property (nonatomic, assign) CGFloat lineSpace;
-@property (nonatomic, assign) UIColor *textColor;
+@property (nonatomic, assign) UIColor *textColorX;
 @end
 
 NS_ASSUME_NONNULL_END

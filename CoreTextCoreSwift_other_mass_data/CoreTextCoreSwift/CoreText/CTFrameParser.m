@@ -41,7 +41,7 @@ static CGFloat widthCallback(void* ref){
         }
     };
     CTParagraphStyleRef theParagraphRef = CTParagraphStyleCreate(theSettings, kNumberOfSettings);
-    UIColor *textColor = config.textColor;
+    UIColor *textColor = config.textColorX;
     NSMutableDictionary *dict = [NSMutableDictionary new];
     dict[(id) kCTForegroundColorAttributeName] = (id)textColor.CGColor;
     dict[(id) kCTFontAttributeName] = (__bridge id)fontRef;
