@@ -30,16 +30,14 @@ extension CTFrameParser{
             else { return result }
             let resultStr = NSMutableAttributedString()
             for dict in arr{
-                if let pairs = dict as? [String: String], let type = pairs["type"]{
+                if let pairs = dict as? [String: Any], let type = pairs["type"] as? String{
                     switch type{
                     case "txt":
                         let temp = parseAttributedContent(fromDictonry: pairs, config: config)
                         resultStr.append(temp)
                     case "img":
                         let imageData = CoreTextImageData()
-                        if let name = pairs["name"]{
-                            imageData.name = name
-                        }
+                        imageData.name = pairs[name: "name"]
                         imageData.position = Int32(resultStr.length)
                         result.0.append(imageData)
                         //创建占位符
@@ -52,10 +50,8 @@ extension CTFrameParser{
                         let length = resultStr.length - startPos;
                         let linkRange = NSMakeRange(startPos, length);
                         let linkData = CoreTextLinkData()
-                        if let name = pairs["content"], let url = pairs["url"]{
-                            linkData.title = name
-                            linkData.url = url
-                        }
+                        linkData.title = pairs[name: "content"]
+                        linkData.url = pairs[name: "url"]
                         linkData.range = linkRange
                         result.1.append(linkData)
                     default:()
@@ -63,12 +59,26 @@ extension CTFrameParser{
                 }
                 
             }
-            result.2 = resultStr
+            if let attr = resultStr.copy() as? NSAttributedString{
+                result.2 = attr
+            }
             return result
         } catch{
             print(error)
         }
         return result
         
+    }
+}
+
+extension Dictionary where Key == String{
+    
+    subscript(name k: String) -> String{
+        if let val = self[k] as? String{
+            return val
+        }
+        else{
+            return "ha_ha"
+        }
     }
 }
