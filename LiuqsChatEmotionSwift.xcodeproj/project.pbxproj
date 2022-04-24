@@ -14,7 +14,6 @@
 		7320DC631D5811FE007383DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7320DC611D5811FE007383DB /* LaunchScreen.storyboard */; };
 		7320DC6E1D5811FE007383DB /* LiuqsChatEmotionSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320DC6D1D5811FE007383DB /* LiuqsChatEmotionSwiftTests.swift */; };
 		7320DC791D5811FE007383DB /* LiuqsChatEmotionSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320DC781D5811FE007383DB /* LiuqsChatEmotionSwiftUITests.swift */; };
-		7320DC9A1D5817BD007383DB /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7320DC991D5817BD007383DB /* tabBarController.swift */; };
 		732769AB1D615623001F1FD0 /* LiuqsEmotionKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732769AA1D615623001F1FD0 /* LiuqsEmotionKeyBoard.swift */; };
 		732769B21D616EFC001F1FD0 /* LiuqsEmoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 732769AF1D616EFC001F1FD0 /* LiuqsEmoji.plist */; };
 		732769B31D616EFC001F1FD0 /* LiuqsEmotionTags.plist in Resources */ = {isa = PBXBuildFile; fileRef = 732769B01D616EFC001F1FD0 /* LiuqsEmotionTags.plist */; };
@@ -174,7 +173,6 @@
 		7320DC741D5811FE007383DB /* LiuqsChatEmotionSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiuqsChatEmotionSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7320DC781D5811FE007383DB /* LiuqsChatEmotionSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiuqsChatEmotionSwiftUITests.swift; sourceTree = "<group>"; };
 		7320DC7A1D5811FE007383DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7320DC991D5817BD007383DB /* tabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabBarController.swift; path = ../../LiuqsChatEmotionSwift/tabBarController.swift; sourceTree = "<group>"; };
 		732769AA1D615623001F1FD0 /* LiuqsEmotionKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiuqsEmotionKeyBoard.swift; sourceTree = "<group>"; };
 		732769AF1D616EFC001F1FD0 /* LiuqsEmoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmoji.plist; sourceTree = "<group>"; };
 		732769B01D616EFC001F1FD0 /* LiuqsEmotionTags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LiuqsEmotionTags.plist; sourceTree = "<group>"; };
@@ -358,7 +356,6 @@
 				7320DC9F1D581883007383DB /* chat */,
 				7320DC9E1D58187C007383DB /* category */,
 				7320DC9C1D58186F007383DB /* other */,
-				7320DC9B1D581868007383DB /* main */,
 				7320DC5F1D5811FE007383DB /* Assets.xcassets */,
 				7320DC611D5811FE007383DB /* LaunchScreen.storyboard */,
 				7320DC641D5811FE007383DB /* Info.plist */,
@@ -383,14 +380,6 @@
 			);
 			path = LiuqsChatEmotionSwiftUITests;
 			sourceTree = "<group>";
-		};
-		7320DC9B1D581868007383DB /* main */ = {
-			isa = PBXGroup;
-			children = (
-				7320DCA01D5818B1007383DB /* controllers */,
-			);
-			path = main;
-			sourceTree = SOURCE_ROOT;
 		};
 		7320DC9C1D58186F007383DB /* other */ = {
 			isa = PBXGroup;
@@ -420,15 +409,6 @@
 				7320DCA11D581901007383DB /* models */,
 			);
 			path = chat;
-			sourceTree = SOURCE_ROOT;
-		};
-		7320DCA01D5818B1007383DB /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7320DC991D5817BD007383DB /* tabBarController.swift */,
-			);
-			name = controllers;
-			path = main/controllers;
 			sourceTree = SOURCE_ROOT;
 		};
 		7320DCA11D581901007383DB /* models */ = {
@@ -878,7 +858,6 @@
 				733EBFC31D6C4D2000EEA2F3 /* LiuqsChatCellFrame.swift in Sources */,
 				73A0C01A1D5854030089F5FD /* ChatListViewCell.swift in Sources */,
 				738F69FE1D6050290027E39A /* LiuqsPushTransition.swift in Sources */,
-				7320DC9A1D5817BD007383DB /* tabBarController.swift in Sources */,
 				73C3356C1D62EA7B0052E646 /* LiuqsToolBarView.swift in Sources */,
 				739010F81D810AEF00F22BCF /* PresentViewController.swift in Sources */,
 				733EBFC11D6BEAA000EEA2F3 /* LiuqsChatMessageCell.swift in Sources */,

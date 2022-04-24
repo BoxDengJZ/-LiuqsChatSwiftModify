@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.backgroundColor = BACKGROUND_Color
         
-        window?.rootViewController = tabBarController()
+        window?.rootViewController = UINavigationController(rootViewController: ChatViewController())
+
         
         window?.makeKeyAndVisible()
         
