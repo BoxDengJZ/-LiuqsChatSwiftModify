@@ -42,7 +42,39 @@ class CTDisplayView: UIView{
         
         context.translateBy(x: 0, y: bounds.size.height)
         context.scaleBy(x: 1.0, y: -1.0)
-        CTFrameDraw(d_d.ctframe, context);
+        guard let lines = CTFrameGetLines(d_d.ctframe) as? [CTLine] else{
+            return
+        }
+        let lineCount = lines.count
+        guard lineCount > 0 else {
+            return
+        }
+        d_d.imageArray.forEach { data in
+            print(data.imagePosition.origin.y)
+        }
+        
+        var originsArray = [CGPoint](repeating: CGPoint.zero, count: lineCount)
+        //用于存储每一行的坐标
+        CTFrameGetLineOrigins(d_d.ctframe, CFRangeMake(0, 0), &originsArray)
+        for (i,line) in lines.enumerated(){
+                var lineAscent:CGFloat      = 0
+                var lineDescent:CGFloat     = 0
+                var lineLeading:CGFloat     = 0
+                _ = CTLineGetTypographicBounds(line , &lineAscent, &lineDescent, &lineLeading)
+                let lineOrigin = originsArray[i]
+                context.textPosition = lineOrigin
+            print(lineOrigin.y )
+            if let first = d_d.imageArray.first(where: { val in
+                let frame = val.imagePosition
+                return (lineOrigin.y == frame.origin.y)
+            }){
+                let font = UIFont.systemFont(ofSize: 16)
+                context.textPosition.y = lineOrigin.y + (first.imagePosition.size.height - font.lineHeight - font.descender) / 2
+            }
+            CTLineDraw(line, context)
+        }
+        
+        
         for imageData in d_d.imageArray{
             if let image = UIImage(named: imageData.name), let cg = image.cgImage{
                 context.draw(cg, in: imageData.imagePosition)
