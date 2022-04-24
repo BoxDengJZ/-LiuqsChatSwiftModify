@@ -49,18 +49,19 @@ class ChatDetailViewController: UIViewController ,LiuqsToolBarDelegate ,UITextVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        createExampleData()
+        self.view.backgroundColor = BACKGROUND_Color
         
-        initSomething()
+
+        self.title = "路飞"
         
         addObsevers()
         
         creatToolBarView()
         
         initChatTableView()
-    }
     
-    func createExampleData() {
+    
+    // createExampleData
         
         for i: Int in 0...3 {
         
@@ -104,16 +105,7 @@ class ChatDetailViewController: UIViewController ,LiuqsToolBarDelegate ,UITextVi
         }
     }
 
-    // 初始化一些数据
-    func initSomething() {
-        
-        self.view.backgroundColor = BACKGROUND_Color
-        
-        self.automaticallyAdjustsScrollViewInsets = false
-        
-        self.title = "路飞"
-    }
-    
+
     //创建tabbleView
     func initChatTableView() {
         

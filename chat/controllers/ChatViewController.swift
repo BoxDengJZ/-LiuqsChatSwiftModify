@@ -20,15 +20,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.createTableView()
         
-        self.initSomething()
-        
-    }
-    
-    func initSomething() {
     
         self.view.backgroundColor = BACKGROUND_Color
-        
-        self.automaticallyAdjustsScrollViewInsets = false
     }
 
    
