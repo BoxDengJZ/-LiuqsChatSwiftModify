@@ -123,14 +123,14 @@ static CGFloat widthCallback(void* ref){
             return nil;
         }
 }
-+ (NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config{
++ (NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict_swift config:(CTFrameParserConfig *)config{
     CTRunDelegateCallbacks callbacks;
     memset(&callbacks, 0, sizeof(CTRunDelegateCallbacks));
     callbacks.version = kCTRunDelegateVersion1;
     callbacks.getAscent = ascentCallback;
     callbacks.getDescent = descentCallback;
     callbacks.getWidth = widthCallback;
-    
+    NSDictionary * dict = (NSDictionary *)dict_swift;
     CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (__bridge  void *)(dict));
     NSString *content = @" ";
     NSDictionary *attributes = [self attributeWithConfig:config];
