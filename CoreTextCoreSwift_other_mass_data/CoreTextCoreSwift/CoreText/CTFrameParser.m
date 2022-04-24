@@ -95,10 +95,8 @@ static CGFloat widthCallback(void* ref){
     return  data;
 }
 
-+ (NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSMutableAttributedString * result = [NSMutableAttributedString new];
-    if (data) {
++ (NSAttributedString *)load:(NSData *) data config:(CTFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
+        NSMutableAttributedString * result = [NSMutableAttributedString new];
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         if ([array isKindOfClass:[NSArray class]]) {
             for (NSDictionary *dict in array) {
@@ -127,7 +125,7 @@ static CGFloat widthCallback(void* ref){
                     [linkArray addObject:linkData];
                 }
             }
-        }
+        
     }
     return  result;
 }
