@@ -62,9 +62,6 @@ class LiuqsChatCellFrame: NSObject {
             
             cellHeight = imageViewFrame.maxY + padding;
             
-        }else {
-    
-            
         }
     }
     
