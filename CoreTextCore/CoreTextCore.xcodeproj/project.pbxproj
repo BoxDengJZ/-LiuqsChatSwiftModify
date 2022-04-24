@@ -92,7 +92,6 @@
 		731FCA9125B8047300B06954 /* CoreTextCore */ = {
 			isa = PBXGroup;
 			children = (
-				7365410925C28CE900CCFADC /* Textlayer */,
 				73653FD225BFC0CC00CCFADC /* coretext-image-1.jpg */,
 				73653FD025BFC0CC00CCFADC /* coretext-image-2.jpg */,
 				73653FD125BFC0CC00CCFADC /* cursor@2x.png */,
@@ -133,13 +132,6 @@
 				73653FE625C1622700CCFADC /* CoreUntil.m */,
 			);
 			path = CoreText;
-			sourceTree = "<group>";
-		};
-		7365410925C28CE900CCFADC /* Textlayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Textlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
