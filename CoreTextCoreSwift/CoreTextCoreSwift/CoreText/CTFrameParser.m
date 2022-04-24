@@ -95,42 +95,7 @@ static CGFloat widthCallback(void* ref){
     return  data;
 }
 
-+ (NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSMutableAttributedString * result = [NSMutableAttributedString new];
-    if (data) {
-        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        if ([array isKindOfClass:[NSArray class]]) {
-            for (NSDictionary *dict in array) {
-                NSString *type = dict[@"type"];
-                if ([type isEqualToString:@"txt"]) {
-                    NSAttributedString *temp = [self parseAttributedContentFromDictonry:dict config:config];
-                    [result appendAttributedString:temp];
-                }else if ([type isEqualToString:@"img"]){
-                    CoreTextImageData *imageData = [CoreTextImageData new];
-                    imageData.name = dict[@"name"];
-                    imageData.position = [result length];
-                    [imageArray addObject:imageData];
-                    //创建占位符
-                    NSAttributedString *as = [self parseImageDataFromNSDictionary:dict config:config];
-                    [result appendAttributedString:as];
-                }else if([type isEqualToString:@"link"]){
-                    NSUInteger startPos = result.length;
-                    NSAttributedString *as = [self parseAttributedContentFromDictonry:dict config:config];
-                    [result appendAttributedString:as];
-                    NSUInteger length = result.length - startPos;
-                    NSRange linkRange = NSMakeRange(startPos, length);
-                    CoreTextLinkData *linkData = [[CoreTextLinkData alloc] init];
-                    linkData.title = dict[@"content"];
-                    linkData.url = dict[@"url"];
-                    linkData.range = linkRange;
-                    [linkArray addObject:linkData];
-                }
-            }
-        }
-    }
-    return  result;
-}
+
 + (NSAttributedString *)parseAttributedContentFromDictonry:(NSDictionary *)dict config:(CTFrameParserConfig *)config{
     NSMutableDictionary *attributes = [self attributeWithConfig:config];
     UIColor *color = [self colorFromTemplate:dict[@"color"]];

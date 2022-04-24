@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (CoreTextData *)parseContent:(NSString *)content config:(CTFrameParserConfig *)config;
 + (CoreTextData *)parseAttributeContent:(NSAttributedString *)content config:(CTFrameParserConfig *)config;
 
-+ (NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray;
++ (NSAttributedString *)parseAttributedContentFromDictonry:(NSDictionary *)dict config:(CTFrameParserConfig *)config;
+
++ (NSAttributedString *)parseImageDataFromNSDictionary:(NSDictionary *)dict config:(CTFrameParserConfig *)config;
 @end
 
 NS_ASSUME_NONNULL_END
