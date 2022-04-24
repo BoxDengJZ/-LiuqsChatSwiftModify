@@ -12,7 +12,11 @@ import Foundation
 
 class CTDisplayView: UIView{
     
-    var data: CoreTextData?
+    var data: CoreTextData?{
+        didSet{
+            setNeedsDisplay()
+        }
+    }
     
     
     
