@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let config = CTFrameParserConfig()
         config.width = 300
         if let path = Bundle.main.path(forResource: "content", ofType: "json"){
-            let data = CTFrameParser.paraseTemplateFile(path, config: config)
+            let data = CTFrameParser.parse(TemplateFile: path, with: config)
             displayView.data = data;
             displayView.frame = CGRect(x: 10, y: 100, width: 300, height: data.height)
         }

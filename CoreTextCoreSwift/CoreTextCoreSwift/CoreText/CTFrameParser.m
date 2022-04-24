@@ -94,15 +94,7 @@ static CGFloat widthCallback(void* ref){
     CFRelease(framesetter);
     return  data;
 }
-+ (CoreTextData *)paraseTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config{
-    NSMutableArray *imageArray = [NSMutableArray new];
-    NSMutableArray *linkArray = [NSMutableArray new];
-    NSAttributedString *attrStr = [self loadTemplateFile:path config:config imageArray:imageArray linkArray:linkArray];
-    CoreTextData *data = [self parseAttributeContent:attrStr config:config];
-    data.imageArray = imageArray;
-    data.linkArray = linkArray;
-    return  data;
-}
+
 + (NSAttributedString *)loadTemplateFile:(NSString *)path config:(CTFrameParserConfig *)config imageArray:(NSMutableArray *)imageArray linkArray:(NSMutableArray *)linkArray{
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableAttributedString * result = [NSMutableAttributedString new];
