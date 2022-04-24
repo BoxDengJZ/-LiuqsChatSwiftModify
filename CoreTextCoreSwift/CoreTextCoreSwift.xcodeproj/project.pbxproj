@@ -13,7 +13,6 @@
 		261377F12815282A00A470F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261377EF2815282A00A470F3 /* Main.storyboard */; };
 		261377F32815282D00A470F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261377F22815282D00A470F3 /* Assets.xcassets */; };
 		261377F62815282D00A470F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261377F42815282D00A470F3 /* LaunchScreen.storyboard */; };
-		2613780D281528B700A470F3 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 261377FE281528B700A470F3 /* CTDisplayView.m */; };
 		2613780E281528B700A470F3 /* CTFrameParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 26137800281528B700A470F3 /* CTFrameParser.m */; };
 		2613780F281528B700A470F3 /* CoreUntil.m in Sources */ = {isa = PBXBuildFile; fileRef = 26137802281528B700A470F3 /* CoreUntil.m */; };
 		26137810281528B700A470F3 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 26137803281528B700A470F3 /* CoreTextImageData.m */; };
@@ -25,6 +24,7 @@
 		2613781C28152A2D00A470F3 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2613781728152A2C00A470F3 /* coretext-image-1.jpg */; };
 		2613781D28152A2D00A470F3 /* cursor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2613781828152A2C00A470F3 /* cursor@2x.png */; };
 		2613781E28152A2D00A470F3 /* red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2613781928152A2C00A470F3 /* red@2x.png */; };
+		2613782028152B5300A470F3 /* CTDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2613781F28152B5300A470F3 /* CTDisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,6 @@
 		261377F52815282D00A470F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		261377F72815282D00A470F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		261377FD281528B600A470F3 /* CoreTextCoreSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreTextCoreSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		261377FE281528B700A470F3 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		26137800281528B700A470F3 /* CTFrameParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParser.m; sourceTree = "<group>"; };
 		26137801281528B700A470F3 /* CTFrameParserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTFrameParserConfig.h; sourceTree = "<group>"; };
 		26137802281528B700A470F3 /* CoreUntil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreUntil.m; sourceTree = "<group>"; };
@@ -50,12 +49,12 @@
 		26137809281528B700A470F3 /* CTFrameParserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTFrameParserConfig.m; sourceTree = "<group>"; };
 		2613780A281528B700A470F3 /* CoreTextData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextData.m; sourceTree = "<group>"; };
 		2613780B281528B700A470F3 /* CoreTextLinkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextLinkData.m; sourceTree = "<group>"; };
-		2613780C281528B700A470F3 /* CTDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDisplayView.h; sourceTree = "<group>"; };
 		2613781528152A2C00A470F3 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		2613781628152A2C00A470F3 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		2613781728152A2C00A470F3 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		2613781828152A2C00A470F3 /* cursor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cursor@2x.png"; sourceTree = "<group>"; };
 		2613781928152A2C00A470F3 /* red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red@2x.png"; sourceTree = "<group>"; };
+		2613781F28152B5300A470F3 /* CTDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +89,6 @@
 			children = (
 				2613781428152A2C00A470F3 /* src */,
 				261377FF281528B700A470F3 /* CoreText */,
-				2613780C281528B700A470F3 /* CTDisplayView.h */,
-				261377FE281528B700A470F3 /* CTDisplayView.m */,
 				261377E92815282A00A470F3 /* AppDelegate.swift */,
 				261377EB2815282A00A470F3 /* SceneDelegate.swift */,
 				261377ED2815282A00A470F3 /* ViewController.swift */,
@@ -100,6 +97,7 @@
 				261377F42815282D00A470F3 /* LaunchScreen.storyboard */,
 				261377F72815282D00A470F3 /* Info.plist */,
 				261377FD281528B600A470F3 /* CoreTextCoreSwift-Bridging-Header.h */,
+				2613781F28152B5300A470F3 /* CTDisplayView.swift */,
 			);
 			path = CoreTextCoreSwift;
 			sourceTree = "<group>";
@@ -220,7 +218,7 @@
 				2613780F281528B700A470F3 /* CoreUntil.m in Sources */,
 				26137812281528B700A470F3 /* CoreTextData.m in Sources */,
 				26137811281528B700A470F3 /* CTFrameParserConfig.m in Sources */,
-				2613780D281528B700A470F3 /* CTDisplayView.m in Sources */,
+				2613782028152B5300A470F3 /* CTDisplayView.swift in Sources */,
 				261377EC2815282A00A470F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

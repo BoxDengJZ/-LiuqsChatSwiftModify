@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreText/CoreText.h>
+
+#import "CoreTextImageData.h"
 NS_ASSUME_NONNULL_BEGIN
 /*
  排版类用于实现文字的排版，持有CTFrameRef 实例以及 CTFrameRef实际绘制需要的高度
@@ -15,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CTFrameRef ctframe;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, strong) NSAttributedString *content;
-@property (nonatomic, copy) NSArray *imageArray;
+@property (nonatomic, copy) NSArray <CoreTextImageData *> *imageArray;
 @property (nonatomic, copy) NSArray *linkArray;
 @end
 
